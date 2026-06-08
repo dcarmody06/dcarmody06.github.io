@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Library — A Private Journal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f0;
+            color: #1e1e1e;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .site-header {
+            text-align: center;
+            border-bottom: 1px solid #e2dcd0;
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .site-title {
+            font-size: 2.5rem;
+            font-weight: normal;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .site-title a {
+            color: #1e1e1e;
+            text-decoration: none;
+        }
+
+        .site-description {
+            color: #7a6e5d;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .nav a {
+            color: #5a4e3e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav a:hover {
+            color: #1e1e1e;
+        }
+
+        /* Journal entries */
+        .entry {
+            margin-bottom: 4rem;
+        }
+
+        .entry-title {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 0.25rem;
+        }
+
+        .entry-title a {
+            color: #1e1e1e;
+            text-decoration: none;
+        }
+
+        .entry-date {
+            color: #9b8e7a;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .entry-content {
+            font-size: 1.05rem;
+        }
+
+        .entry-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* About page */
+        .page-content {
+            font-size: 1.05rem;
+        }
+
+        .page-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* Login form */
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e2dcd0;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #d4cdc0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .login-box button {
+            background: #1e1e1e;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .login-box button:hover {
+            background: #3a3028;
+        }
+
+        .error {
+            color: #b55a4a;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2dcd0;
+            color: #9b8e7a;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- Content will be loaded here dynamically -->
+    </div>
+
+    <script>
+        // ---------- CONFIGURATION ----------
+        // Set your password here (change this!)
+        const BLOG_PASSWORD = "interlinked";
+        
+        // Blog data (you will add entries here)
+        const blogEntries = [
+            {
+                title: "'I can, so I must'",
+                date: "08.06.2026",
+                content: `
+                    <p>It has been a strange few weeks for me. In a bad way? No, not at all. Just strange, unfamiliar. They say I was born too late to explore the Earth, and too early to explore the stars, but what does that matter when there’s still so much I have yet to understand about myself?</p>
+                    
+                    <p>I have seen my friends a lot in the past few months, met someone I love, and felt very content with life. A nice change of pace for me. Felt like something had changed within me, like I loosened up a lot. It feels like a lot of subconscious pressure was released, and everything became easier.</p>
+                    
+                    <p>It’s tough to think of what to say when you have so much to say. That’s something I’ve half-figured out, but it’s tough when your mind is so active that you almost enjoy the moment too much to break the silence, or if you’re so desperate to break the silence that the thoughts crash into each other and nothing manages to escape your lips. It sounds complicated when I put it that way, but it’s really just a matter of not letting your nerves control you. Once I realized that it wasn’t so hard, the hard part is just remembering that.</p>
+                    
+                    <p>Was on a walk recently and saw a man, young, probably only a few years older than me, carrying two shopping bags, one in each hand. They were massive, almost overflowing, and I could see his arms shaking as he walked before stopping and putting them down for a moment, looking frustrated, to take a break, before picking them back up with some renewed fire in his eyes and continuing down his path, passing me as he walked.</p>
+                    
+                    <p>I couldn’t help but keep thinking about it for some reason. The memory lingered in the back of my mind for days. The whole incident, in my mind, was kind of a microcosm for the struggles of life. Carrying a lot of responsibility and burdens, perhaps a lot of which isn’t even your own, until you can’t anymore. Until your metaphorical arms give out. But even if you think you can’t keep going, you must. You have your reason(s) to. And if you don’t, then why did you even start in the first place?</p>
+                    
+                    <p>When I think of it like that, a lot of decisions I have made didn’t make much sense. I didn’t have reasons other than ‘I can, so I must’ for pursuing many of my passions. Young David had a tendency to be motivated by this this; this need to prove himself and to be ‘great’ at everything he did, and he did, many times. But it was never enough. Every milestone was just another ceiling to be broken through, and with this mindset I found it difficult to truly appreciate or enjoy what I was doing in the moment, it was more so done for my appreciation and joy in some theoretical future that was never even guaranteed to begin with. And with this realization, I had been given a sense of clarity I had wanted for a long time, and the cycle came to an end. I think she’s a big part of why my metaphorical bags feel lighter now.</p>
+                    
+                    <p>Am I proud of my achievements? Yes. This is the biggest thing. I can now say, without a doubt, that I am proud of myself for what I’ve achieved and for how far I’ve come.</p>
+                    
+                    <p>Would I put myself through it again? No. Or at least, not in the same way.</p>
+                `
+            }
+            // Add more entries here following the same format:
+            // {
+            //     title: "Entry Title",
+            //     date: "DD.MM.YYYY",
+            //     content: `<p>Your content here...</p>`
+            // },
+        ];
+
+        // About page content
+        const aboutContent = `
+            <p>my private journal, a window into my mind.</p>
+            <p>unpolished, random thoughts thrown together in one place.</p>
+            <p>for your eyes only.</p>
+        `;
+
+        // ---------- ROUTING LOGIC ----------
+        let isAuthenticated = sessionStorage.getItem('blogAuth') === 'true';
+
+        function checkAuth() {
+            const hash = window.location.hash;
+            if (hash === '#about' || hash === '#journal' || !hash) {
+                // These pages require login
+                return isAuthenticated;
+            }
+            return true; // Login page doesn't require auth
+        }
+
+        function showLogin(errorMessage = '') {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                <div class="login-container">
+                    <div class="login-box">
+                        <h2>Lost Library</h2>
+                        <p style="color:#7a6e5d; margin-bottom:1.5rem;">A private journal</p>
+                        <input type="password" id="passwordInput" placeholder="Enter password" autofocus>
+                        <button onclick="attemptLogin()">Enter</button>
+                        <div class="error" id="loginError">${errorMessage}</div>
+                    </div>
+                </div>
+            `;
+            
+            // Enter key to submit
+            document.getElementById('passwordInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') attemptLogin();
+            });
+        }
+
+        function attemptLogin() {
+            const input = document.getElementById('passwordInput');
+            const password = input.value;
+            
+            if (password === BLOG_PASSWORD) {
+                sessionStorage.setItem('blogAuth', 'true');
+                isAuthenticated = true;
+                renderPage();
+            } else {
+                showLogin('Wrong password. Try again.');
+            }
+        }
+
+        function renderPage() {
+            if (!checkAuth()) {
+                showLogin();
+                return;
+            }
+
+            const hash = window.location.hash;
+            const app = document.getElementById('app');
+            
+            if (hash === '#about') {
+                // About page
+                app.innerHTML = `
+                    <div class="container">
+                        <div class="site-header">
+                            <h1 class="site-title"><a href="#">Lost Library</a></h1>
+                            <div class="site-description">A private journal, a window into my mind</div>
+                            <div class="nav">
+                                <a href="#" data-nav="journal">Journal</a>
+                                <a href="#about" data-nav="about">About</a>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            ${aboutContent}
+                        </div>
+                        <footer>unfinished</footer>
+                    </div>
+                `;
+            } else {
+                // Journal page (default)
+                let entriesHtml = '';
+                for (let i = 0; i < blogEntries.length; i++) {
+                    const entry = blogEntries[i];
+                    entriesHtml += `
+                        <article class="entry">
+                            <h2 class="entry-title">${entry.title}</h2>
+                            <div class="entry-date">${entry.date}</div>
+                            <div class="entry-content">${entry.content}</div>
+                        </article>
+                    `;
+                }
+                
+                app.innerHTML = `
+                    <div class="container">
+                        <div class="site-header">
+                            <h1 class="site-title"><a href="#">lost library</a></h1>
+                            <div class="site-description">a window into my mind</div>
+                            <div class="nav">
+                                <a href="#" data-nav="journal">Journal</a>
+                                <a href="#about" data-nav="about">About</a>
+                            </div>
+                        </div>
+                        ${entriesHtml || '<p style="text-align:center; color:#9b8e7a;">No entries yet.</p>'}
+                        <footer>unfinished</footer>
+                    </div>
+                `;
+            }
+            
+            // Re-attach navigation event listeners
+            document.querySelectorAll('[data-nav]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (link.getAttribute('data-nav') === 'journal') {
+                        window.location.hash = '';
+                        renderPage();
+                    } else if (link.getAttribute('data-nav') === 'about') {
+                        window.location.hash = 'about';
+                        renderPage();
+                    }
+                });
+            });
+        }
+
+        // Handle hash changes (browser back/forward)
+        window.addEventListener('hashchange', () => renderPage());
+        
+        // Initial render
+        renderPage();
+    </script>
+</body>
+</html>
