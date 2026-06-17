@@ -15,7 +15,7 @@
             background-color: #faf7f0;
             color: #1e1e1e;
             font-family: 'Georgia', 'Times New Roman', Times, serif;
-            line-height: 1.7;
+            line-height: 1.8;
             padding: 2rem 1rem;
         }
 
@@ -33,10 +33,10 @@
         }
 
         .site-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: normal;
             letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .site-title a {
@@ -46,9 +46,14 @@
 
         .site-description {
             color: #7a6e5d;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-style: italic;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .site-sub {
+            color: #9b8e7a;
+            font-size: 0.8rem;
         }
 
         /* Navigation */
@@ -56,7 +61,7 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .nav a {
@@ -64,29 +69,77 @@
             text-decoration: none;
             font-size: 0.9rem;
             letter-spacing: 0.5px;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
         }
 
         .nav a:hover {
+            border-bottom-color: #5a4e3e;
+        }
+
+        /* Library (entry list) */
+        .entry-link {
+            display: block;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid #ece6dc;
+            text-decoration: none;
             color: #1e1e1e;
+            transition: padding-left 0.2s;
         }
 
-        /* Journal entries */
-        .entry {
-            margin-bottom: 4rem;
+        .entry-link:hover {
+            padding-left: 0.5rem;
         }
 
-        .entry-title {
-            font-size: 1.8rem;
+        .entry-link .title {
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+
+        .entry-link .meta {
+            display: block;
+            color: #9b8e7a;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.15rem;
+        }
+
+        .entry-link .type {
+            display: inline-block;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b5a898;
+            margin-left: 0.5rem;
+            background: #f0ece4;
+            padding: 0.1rem 0.6rem;
+            border-radius: 12px;
+        }
+
+        /* Single entry view */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #7a6e5d;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .back-link:hover {
+            border-bottom-color: #7a6e5d;
+        }
+
+        .entry-full .entry-title {
+            font-size: 2rem;
             font-weight: normal;
             margin-bottom: 0.25rem;
         }
 
-        .entry-title a {
-            color: #1e1e1e;
-            text-decoration: none;
-        }
-
-        .entry-date {
+        .entry-full .entry-date {
             color: #9b8e7a;
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -94,69 +147,32 @@
             margin-bottom: 1.5rem;
         }
 
-        .entry-content {
+        .entry-full .entry-content {
             font-size: 1.05rem;
         }
 
-        .entry-content p {
+        .entry-full .entry-content p {
             margin-bottom: 1.2rem;
         }
 
-        /* About page */
-        .page-content {
-            font-size: 1.05rem;
+        .entry-full .entry-type {
+            display: inline-block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b5a898;
+            background: #f0ece4;
+            padding: 0.15rem 0.75rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
         }
 
+        /* About */
         .page-content p {
             margin-bottom: 1.2rem;
         }
 
-        /* Login form */
-        .login-container {
-            max-width: 400px;
-            margin: 100px auto;
-            text-align: center;
-        }
-
-        .login-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border: 1px solid #e2dcd0;
-        }
-
-        .login-box input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #d4cdc0;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 1rem;
-        }
-
-        .login-box button {
-            background: #1e1e1e;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        .login-box button:hover {
-            background: #3a3028;
-        }
-
-        .error {
-            color: #b55a4a;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
+        /* Footer */
         footer {
             text-align: center;
             margin-top: 4rem;
@@ -165,83 +181,112 @@
             color: #9b8e7a;
             font-size: 0.75rem;
         }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .site-title {
+                font-size: 2rem;
+            }
+            .entry-link .title {
+                font-size: 1.1rem;
+            }
+            .entry-full .entry-title {
+                font-size: 1.6rem;
+            }
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container" id="app">
-        <!-- Content will be loaded here dynamically -->
+        <!-- Content rendered by JavaScript -->
     </div>
 
     <script>
         // ---------- CONFIGURATION ----------
-        // Set your password here (change this!)
-        const BLOG_PASSWORD = "interlinked26";
-        
-        // Blog data (you will add entries here)
-        const blogEntries = [
+        const BLOG_PASSWORD = "lostlibrary2026";
+
+        // ---------- DATA ----------
+        const entries = [
             {
-                title: "'I can, so I must'",
+                id: "i-can-so-i-must",
+                title: "I can, so I must",
                 date: "08.06.2026",
+                type: "Journal",
                 content: `
-                    <p>It has been a strange few weeks for me. In a bad way? No, not at all. Just strange, unfamiliar. They say I was born too late to explore the Earth, and too early to explore the stars, but what does that matter when there’s still so much I have yet to understand about myself?</p>
-                    
+                    <p>It has been a strange few weeks for me. In a bad way? No, not at all. Just strange, unfamiliar. They say I was born too late to explore the Earth, and too early to explore the stars, but what does that matter when there's still so much I have yet to understand about myself?</p>
                     <p>I have seen my friends a lot in the past few months, met someone I love, and felt very content with life. A nice change of pace for me. Felt like something had changed within me, like I loosened up a lot. It feels like a lot of subconscious pressure was released, and everything became easier.</p>
-                    
-                    <p>It’s tough to think of what to say when you have so much to say. That’s something I’ve half-figured out, but it’s tough when your mind is so active that you almost enjoy the moment too much to break the silence, or if you’re so desperate to break the silence that the thoughts crash into each other and nothing manages to escape your lips. It sounds complicated when I put it that way, but it’s really just a matter of not letting your nerves control you. Once I realized that it wasn’t so hard, the hard part is just remembering that.</p>
-                    
+                    <p>It's tough to think of what to say when you have so much to say. That's something I've half-figured out, but it's tough when your mind is so active that you almost enjoy the moment too much to break the silence, or if you're so desperate to break the silence that the thoughts crash into each other and nothing manages to escape your lips. It sounds complicated when I put it that way, but it's really just a matter of not letting your nerves control you. Once I realized that it wasn't so hard, the hard part is remembering that.</p>
                     <p>Was on a walk recently and saw a man, young, probably only a few years older than me, carrying two shopping bags, one in each hand. They were massive, almost overflowing, and I could see his arms shaking as he walked before stopping and putting them down for a moment, looking frustrated, to take a break, before picking them back up with some renewed fire in his eyes and continuing down his path, passing me as he walked.</p>
-                    
-                    <p>I couldn’t help but keep thinking about it for some reason. The memory lingered in the back of my mind for days. The whole incident, in my mind, was kind of a microcosm for the struggles of life. Carrying a lot of responsibility and burdens, perhaps a lot of which isn’t even your own, until you can’t anymore. Until your metaphorical arms give out. But even if you think you can’t keep going, you must. You have your reason(s) to. And if you don’t, then why did you even start in the first place?</p>
-                    
-                    <p>When I think of it like that, a lot of decisions I have made didn’t make much sense. I didn’t have reasons other than ‘I can, so I must’ for pursuing many of my passions. Young David had a tendency to be motivated by this; this need to prove himself and to be ‘great’ at everything he did, and he did, many times. But it was never enough. Every milestone was just another ceiling to be broken through, and with this mindset I found it difficult to truly appreciate or enjoy what I was doing in the moment, it was more so done for my appreciation and joy in some theoretical future that was never even guaranteed to begin with. And with this realization, I had been given a sense of clarity I had wanted for a long time, and the cycle came to an end. I think she’s a big part of why my metaphorical bags feel lighter now.</p>
-                    
-                    <p>Am I proud of my achievements? Yes. This is the biggest thing. I can now say, without a doubt, that I am proud of myself for what I’ve achieved and for how far I’ve come.</p>
-                    
+                    <p>I couldn't help but keep thinking about it for some reason. The memory lingered in the back of my mind for days. The whole incident, in my mind, was kind of a microcosm for the struggles of life. Carrying a lot of responsibility and burdens, perhaps a lot of which isn't even your own, until you can't anymore. Until your metaphorical arms give out. But even if you think you can't keep going, you must. You have your reason(s) to. And if you don't, then why did you even start in the first place?</p>
+                    <p>When I think of it like that, a lot of decisions I have made didn't make much sense. I didn't have reasons other than 'I can, so I must' for pursuing many of my passions. Young David had a tendency to be motivated by this; this need to prove himself and to be 'great' at everything he did, and he did, many times. But it was never enough. Every milestone was just another ceiling to be broken through, and with this mindset I found it difficult to truly appreciate or enjoy what I was doing in the moment, it was more so done for my appreciation and joy in some theoretical future that was never even guaranteed to begin with. And with this realization, I had been given a sense of clarity I had wanted for a long time, and the cycle came to an end. I think she's a big part of why my metaphorical bags feel lighter now.</p>
+                    <p>Am I proud of my achievements? Yes. This is the biggest thing. I can now say, without a doubt, that I am proud of myself for what I've achieved and for how far I've come.</p>
                     <p>Would I put myself through it again? No. Or at least, not in the same way.</p>
                 `
+            },
+            {
+                id: "borrowed-guilt",
+                title: "borrowed guilt",
+                date: "12.06.2026",
+                type: "Journal",
+                content: `
+                    <p>Are we the same people when we wake up? I would say no, because what is it that changes people? Experiences, right? And do we not experience alternate versions of reality in our sleep, through dreams, nightmares and whatever else exists during the deepest stages of sleep? Dreams can sometimes be so vivid, it can be hard to tell whether they had actually occurred or not.</p>
+                    <p>I have had many experiences with vivid dreams in the past, but also quite a lot recently. The vivid, unforgettable type that would leave me in an amnesic haze upon awakening. I would lie awake in my bed trying to decipher whether or not what had occurred was an illusion or not. Whether I had actually had that strange conversation with my best friend or not. Of course, I had not, yet even though I knew in the moment it was impossible, it felt too real to be impossible.</p>
+                    <p>In a similar way, guilt can have an interesting effect on people. Like a dream you couldn't help but feel slightly unnerved by, borrowed guilt can weigh down on your mind. The type of guilt where you would feel guilty for defending your perspective because you felt the other person was disappointed by the fact you didn't quite see eye to eye.</p>
+                    <p>I've been thinking about it again since an argument a number of days ago, an argument about boundaries. Every time this kind of topic arises, the faint smell of old friendships seeps through the cracks in my memory to the forefront of my mind.</p>
+                    <p>I am glad I mustered up the courage to give pieces of myself back to the world, because when I did it was as if my entire being was reassembled into beautiful a stained glass window.</p>
+                    <p>I would frequently feel guilt gnawing away at me and making my brain itch over small things, and even for that which was not my fault to begin with. But now I have found some kind of clarity; when my nightmare is no longer what comforts me, it is easy to find my zeal again.</p>
+                    <p>Some people may have wanted to lock their hearts in a box and forget them there, but I will not write my name on a grave next to theirs.</p>
+                `
+            },
+            {
+                id: "red-petals",
+                title: "red petals",
+                date: "12.06.2026",
+                type: "Fragment",
+                content: `
+                    <p>I am woken by the sun's gentle rays caressing my forehead, seeping into my eyes and bringing me back into the world of the living. I roll out of bed, climbing to my feet as I look into my eyes in the mirror. There was a time where I couldn't recognize my face, where next to me in the reflection I could see your eyes crossing mine. I rub my eyes.</p>
+                    <p>These red petals that would blossom into hell and burn me at the touch. I played the game, and lost myself in the process. My heart wasn't tar before.</p>
+                    <p>My hands shook, I tried to hold them, to calm down and breathe, but I was sinking deeper and drowning. Pre-emptive tears for something I haven't experienced and anger for a future mistake.</p>
+                    <p>It's time.</p>
+                    <p>I gather myself and walk out onto the open stage, and as I looked out at the rows of faceless dolls staring back at me, I forgot what I was supposed to play.</p>
+                    <p>But I won't stop the music.</p>
+                `
             }
-            // Add more entries here following the same format:
-            // {
-            //     title: "Entry Title",
-            //     date: "DD.MM.YYYY",
-            //     content: `<p>Your content here...</p>`
-            // },
         ];
 
-        // About page content
         const aboutContent = `
-            <p>my private journal, a window into my mind.</p>
-            <p>unpolished, random thoughts thrown together in one place.</p>
-            <p>for your eyes only.</p>
+            <p>This is Lost Library — a private journal, a window into my mind.</p>
+            <p>You're here because I trust you. That's all.</p>
+            <p>These are my thoughts, unpolished and honest. No performance. No audience. Just me.</p>
         `;
 
-        // ---------- ROUTING LOGIC ----------
+        // ---------- AUTH ----------
         let isAuthenticated = sessionStorage.getItem('blogAuth') === 'true';
 
         function checkAuth() {
             const hash = window.location.hash;
-            if (hash === '#about' || hash === '#journal' || !hash) {
-                // These pages require login
-                return isAuthenticated;
-            }
-            return true; // Login page doesn't require auth
+            const isAuthPage = hash === '#about' || hash === '' || hash.startsWith('#entry-');
+            if (isAuthPage) return isAuthenticated;
+            return true;
         }
 
-        function showLogin(errorMessage = '') {
+        // ---------- RENDER ----------
+        function showLogin(error = '') {
             const app = document.getElementById('app');
             app.innerHTML = `
-                <div class="login-container">
-                    <div class="login-box">
-                        <h2>lost library</h2>
-                        <p style="color:#7a6e5d; margin-bottom:1.5rem;">A private journal</p>
-                        <input type="password" id="passwordInput" placeholder="Enter password" autofocus>
-                        <button onclick="attemptLogin()">Enter</button>
-                        <div class="error" id="loginError">${errorMessage}</div>
+                <div style="max-width:400px; margin:100px auto; text-align:center;">
+                    <div style="background:white; padding:2rem; border-radius:8px; border:1px solid #e2dcd0;">
+                        <h2 style="font-weight:normal;">Lost Library</h2>
+                        <p style="color:#7a6e5d; margin-bottom:1.5rem; font-style:italic;">A private journal</p>
+                        <input type="password" id="passwordInput" placeholder="Enter password" autofocus style="width:100%; padding:12px; margin:10px 0; border:1px solid #d4cdc0; border-radius:4px; font-family:monospace; font-size:1rem;">
+                        <button onclick="attemptLogin()" style="background:#1e1e1e; color:white; border:none; padding:12px 24px; border-radius:4px; cursor:pointer; font-size:1rem; margin-top:10px;">Enter</button>
+                        <div style="color:#b55a4a; margin-top:10px; font-size:0.9rem;">${error}</div>
                     </div>
                 </div>
             `;
-            
-            // Enter key to submit
             document.getElementById('passwordInput').addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') attemptLogin();
             });
@@ -249,9 +294,7 @@
 
         function attemptLogin() {
             const input = document.getElementById('passwordInput');
-            const password = input.value;
-            
-            if (password === BLOG_PASSWORD) {
+            if (input.value === BLOG_PASSWORD) {
                 sessionStorage.setItem('blogAuth', 'true');
                 isAuthenticated = true;
                 renderPage();
@@ -268,63 +311,84 @@
 
             const hash = window.location.hash;
             const app = document.getElementById('app');
-            
+
+            // ABOUT PAGE
             if (hash === '#about') {
-                // About page
                 app.innerHTML = `
-                    <div class="container">
-                        <div class="site-header">
-                            <h1 class="site-title"><a href="#">lost library</a></h1>
-                            <div class="site-description">a window into my mind</div>
-                            <div class="nav">
-                                <a href="#" data-nav="journal">Journal</a>
-                                <a href="#about" data-nav="about">About</a>
-                            </div>
+                    <div class="site-header">
+                        <h1 class="site-title"><a href="#">Lost Library</a></h1>
+                        <div class="site-description">A private journal, a window into my mind</div>
+                        <div class="nav">
+                            <a href="#" data-nav="library">Library</a>
+                            <a href="#about" data-nav="about">About</a>
                         </div>
-                        <div class="page-content">
-                            ${aboutContent}
-                        </div>
-                        <footer>unfinished</footer>
                     </div>
+                    <div class="page-content">${aboutContent}</div>
+                    <footer>Private — for her eyes only</footer>
                 `;
-            } else {
-                // Journal page (default)
-                let entriesHtml = '';
-                for (let i = 0; i < blogEntries.length; i++) {
-                    const entry = blogEntries[i];
-                    entriesHtml += `
-                        <article class="entry">
-                            <h2 class="entry-title">${entry.title}</h2>
+                attachNav();
+                return;
+            }
+
+            // SINGLE ENTRY
+            if (hash.startsWith('#entry-')) {
+                const id = hash.replace('#entry-', '');
+                const entry = entries.find(e => e.id === id);
+                if (entry) {
+                    app.innerHTML = `
+                        <div class="site-header" style="border-bottom: none; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+                            <h1 class="site-title" style="font-size:1.8rem;"><a href="#">Lost Library</a></h1>
+                        </div>
+                        <a href="#" class="back-link" data-nav="library">← Back to Library</a>
+                        <div class="entry-full">
+                            <div class="entry-type">${entry.type}</div>
+                            <h1 class="entry-title">${entry.title}</h1>
                             <div class="entry-date">${entry.date}</div>
                             <div class="entry-content">${entry.content}</div>
-                        </article>
-                    `;
-                }
-                
-                app.innerHTML = `
-                    <div class="container">
-                        <div class="site-header">
-                            <h1 class="site-title"><a href="#">lost library</a></h1>
-                            <div class="site-description">a window into my mind</div>
-                            <div class="nav">
-                                <a href="#" data-nav="journal">Journal</a>
-                                <a href="#about" data-nav="about">About</a>
-                            </div>
                         </div>
-                        ${entriesHtml || '<p style="text-align:center; color:#9b8e7a;">No entries yet.</p>'}
-                        <footer>unfinished</footer>
-                    </div>
+                        <footer>Private — for her eyes only</footer>
+                    `;
+                    attachNav();
+                    return;
+                }
+            }
+
+            // LIBRARY (default)
+            let listHtml = '';
+            for (const entry of entries) {
+                listHtml += `
+                    <a href="#entry-${entry.id}" class="entry-link">
+                        <span class="title">${entry.title}</span>
+                        <span class="type">${entry.type}</span>
+                        <span class="meta">${entry.date}</span>
+                    </a>
                 `;
             }
-            
-            // Re-attach navigation event listeners
+
+            app.innerHTML = `
+                <div class="site-header">
+                    <h1 class="site-title"><a href="#">Lost Library</a></h1>
+                    <div class="site-description">A private journal, a window into my mind</div>
+                    <div class="nav">
+                        <a href="#" data-nav="library">Library</a>
+                        <a href="#about" data-nav="about">About</a>
+                    </div>
+                </div>
+                ${listHtml}
+                <footer>Private — for her eyes only</footer>
+            `;
+            attachNav();
+        }
+
+        function attachNav() {
             document.querySelectorAll('[data-nav]').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    if (link.getAttribute('data-nav') === 'journal') {
+                    const target = link.getAttribute('data-nav');
+                    if (target === 'library') {
                         window.location.hash = '';
                         renderPage();
-                    } else if (link.getAttribute('data-nav') === 'about') {
+                    } else if (target === 'about') {
                         window.location.hash = 'about';
                         renderPage();
                     }
@@ -332,10 +396,10 @@
             });
         }
 
-        // Handle hash changes (browser back/forward)
-        window.addEventListener('hashchange', () => renderPage());
-        
-        // Initial render
+        // ---------- HASH CHANGE ----------
+        window.addEventListener('hashchange', renderPage);
+
+        // ---------- INIT ----------
         renderPage();
     </script>
 </body>
