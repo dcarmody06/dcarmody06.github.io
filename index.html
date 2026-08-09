@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost Library — A Private Journal</title>
+    <title>Lost Library — Decommissioned</title>
     <style>
         * {
             margin: 0;
@@ -15,550 +15,54 @@
             background-color: #faf7f0;
             color: #1e1e1e;
             font-family: 'Georgia', 'Times New Roman', Times, serif;
-            line-height: 1.8;
-            padding: 2rem 1rem;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
         }
 
         .container {
-            max-width: 720px;
-            margin: 0 auto;
+            max-width: 600px;
         }
 
-        /* Header */
-        .site-header {
-            text-align: center;
-            border-bottom: 1px solid #e2dcd0;
-            padding-bottom: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .site-title {
-            font-size: 2.8rem;
+        .title {
+            font-size: 3.5rem;
             font-weight: normal;
             letter-spacing: -0.5px;
-            margin-bottom: 0.25rem;
-        }
-
-        .site-title a {
-            color: #1e1e1e;
-            text-decoration: none;
-        }
-
-        .site-description {
-            color: #7a6e5d;
-            font-size: 0.95rem;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        .site-sub {
-            color: #9b8e7a;
-            font-size: 0.8rem;
-        }
-
-        /* Navigation */
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        .nav a {
-            color: #5a4e3e;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            padding: 0.25rem 0;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
-        }
-
-        .nav a:hover {
-            border-bottom-color: #5a4e3e;
-        }
-
-        /* Library (entry list) */
-        .entry-link {
-            display: block;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid #ece6dc;
-            text-decoration: none;
-            color: #1e1e1e;
-            transition: padding-left 0.2s;
-        }
-
-        .entry-link:hover {
-            padding-left: 0.5rem;
-        }
-
-        .entry-link .title {
-            font-size: 1.3rem;
-            font-weight: normal;
-        }
-
-        .entry-link .meta {
-            display: block;
-            color: #9b8e7a;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 0.15rem;
-        }
-
-        .entry-link .type {
-            display: inline-block;
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #b5a898;
-            margin-left: 0.5rem;
-            background: #f0ece4;
-            padding: 0.1rem 0.6rem;
-            border-radius: 12px;
-        }
-
-        /* Single entry view */
-        .back-link {
-            display: inline-block;
             margin-bottom: 2rem;
-            color: #7a6e5d;
-            text-decoration: none;
-            font-size: 0.85rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
+            color: #1e1e1e;
         }
 
-        .back-link:hover {
-            border-bottom-color: #7a6e5d;
-        }
-
-        .entry-full .entry-title {
-            font-size: 2rem;
-            font-weight: normal;
-            margin-bottom: 0.25rem;
-        }
-
-        .entry-full .entry-date {
+        .decommissioned {
+            font-size: 1.5rem;
             color: #9b8e7a;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
+            font-style: italic;
+            letter-spacing: 2px;
         }
 
-        .entry-full .entry-content {
-            font-size: 1.05rem;
-        }
-
-        .entry-full .entry-content p {
-            margin-bottom: 1.2rem;
-        }
-
-        .entry-full .entry-type {
-            display: inline-block;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .sub {
+            margin-top: 2rem;
             color: #b5a898;
-            background: #f0ece4;
-            padding: 0.15rem 0.75rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
         }
 
-        /* About */
-        .page-content p {
-            margin-bottom: 1.2rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2dcd0;
-            color: #9b8e7a;
-            font-size: 0.75rem;
-        }
-
-        /* Mobile */
         @media (max-width: 600px) {
-            .site-title {
-                font-size: 2rem;
+            .title {
+                font-size: 2.5rem;
             }
-            .entry-link .title {
-                font-size: 1.1rem;
-            }
-            .entry-full .entry-title {
-                font-size: 1.6rem;
-            }
-            .container {
-                padding: 0 0.5rem;
+            .decommissioned {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container" id="app">
-        <!-- Content rendered by JavaScript -->
+    <div class="container">
+        <h1 class="title">Lost Library</h1>
+        <div class="decommissioned">Decommissioned</div>
+        <div class="sub">—</div>
     </div>
-
-    <script>
-        // ---------- CONFIGURATION ----------
-        const BLOG_PASSWORD = "interlinked26";
-
-        // ---------- DATA ----------
-        const entries = [
-            {
-                id: "prototype-introduction-2",
-                title: "PROTOTYPE INTRODUCTION #2",
-                date: "05.08.2026",
-                type: "Novel",
-                content: `
-                    <p>Wha... Hello?</p>
-                    <p>...</p>
-                    <p>What happened? I just..</p>
-                    <p>Hello? Is...</p>
-                    <p>Is anybody there?</p>
-                    <p>...</p>
-                    <p>Where am I? What is this place..?</p>
-                    <p>My flower, it's...</p>
-                    <p>...Where the hell am I?!</p>
-                    <p>Hello?!</p>
-                    <p>...Anybody?</p>
-                    <p>...</p>
-                    <p><em>(page break)</em></p>
-                    <p>It's so cold...</p>
-                `
-            },
-            {
-                id: "prototype-introduction-1",
-                title: "PROTOTYPE INTRODUCTION #1",
-                date: "11.07.2026",
-                type: "Novel",
-                content: `
-                    <p>You're finally here.</p>
-                    <p>Good.</p>
-                    <p>That means you exist. That means you have thoughts, and feelings, and a sense of being that you carry with you like a lantern in the dark.</p>
-                    <p>Very good.</p>
-                    <p>You don't think about it, you just are.</p>
-                    <p>…</p>
-                    <p>But you must understand something, and you must understand it now, before we go any further. You are not alone in here.</p>
-                    <p>…</p>
-                    <p>Do you understand?</p>
-                    <p><em>(insert page break here, reader must turn the page in order to continue. Them turning the page is a symbol of them accepting)</em></p>
-                    <p>Excellent.</p>
-                    <p>…</p>
-                    <p>Are you confused?</p>
-                    <p>Confusion is the first step towards understanding. Or it's the first step towards madness. The difference is mostly a matter of perspective, and perspective tends to be quite… flexible.</p>
-                    <p>That is what makes this interesting.</p>
-                    <p>…</p>
-                    <p>There is a town.</p>
-                    <p>There is a boy.</p>
-                    <p>There is a song.</p>
-                    <p>You will feel something watching you.</p>
-                    <p>When you turn…</p>
-                    <p>There will be nothing.</p>
-                    <p>…</p>
-                    <p><em>(insert page break)</em></p>
-                    <p>Something is out there.</p>
-                    <p>It wears the shape you are not yet ready to see.</p>
-                    <p>It is patient.</p>
-                    <p>It has always been there.</p>
-                    <p>…</p>
-                    <p>How far are you willing to go to find it?</p>
-                    <p><em>(final page break)</em></p>
-                    <p>Try not to let it find you first.</p>
-                `
-            },
-            {
-                id: "a-month-with-you",
-                title: "A Month With You",
-                date: "22.06.2026",
-                type: "Poem",
-                content: `
-                    <p><em>A Month With You</em></p>
-                    <p>Do you remember our first date?<br>
-                    Me and you hugging,<br>
-                    my heart pounding like it never had before,<br>
-                    when we met outside Hunters<br>
-                    for the very first time?</p>
-                    <p>When I looked across our table into your eyes,<br>
-                    I didn't feel overwhelmed or scared,<br>
-                    just fascinated by you.<br>
-                    That's when I knew you were special.</p>
-                    <p>Even while I watched the F1 cars go round<br>
-                    and round, I was wondering what to say next,<br>
-                    while you were wondering<br>
-                    if you'd ever escape<br>
-                    from that bathroom stall alive.</p>
-                    <p>Our most brutal and vicious battles always happen<br>
-                    when we reach the counter, exactly the same place<br>
-                    where we locked eyes for the first time.</p>
-                    <p>We fight over bills<br>
-                    like we're arguing about something that matters,<br>
-                    yet I still always win.<br>
-                    At least I think I do.</p>
-                    <p>You said you'd have to shotgun marry me<br>
-                    if I bought the bubblegum ice-cream,<br>
-                    but since we like to take things slow,<br>
-                    I'll be waiting.</p>
-                    <p>While you made small talk with the waitress<br>
-                    over her nails, I was still pondering the choices<br>
-                    on the menu.<br>
-                    You never had that issue.</p>
-                    <p>You order plain burgers, something I've gotten<br>
-                    used to by now, yet nothing about you<br>
-                    is plain.<br>
-                    Not your writing, not your mind,<br>
-                    not the way you make me feel.</p>
-                    <p>I smile without thinking, walking in the sun,<br>
-                    thinking about your smile, your laugh, your beautiful<br>
-                    eyes, and how you captivate me when<br>
-                    you yap about your interests.</p>
-                    <p>I still get butterflies when I see you,<br>
-                    a deep tingling in my gut<br>
-                    that tells me not to mess this up,<br>
-                    like my body forgot<br>
-                    our first date was already<br>
-                    almost two months ago.</p>
-                    <p>We keep finding each other<br>
-                    in small places we weren't looking.<br>
-                    The thrill of feeling so interlinked<br>
-                    with another person<br>
-                    still makes me happier<br>
-                    than I've ever been.</p>
-                    <p>You cried when I gave you the locket,<br>
-                    said it was one of the best gifts you ever got.<br>
-                    In that moment,<br>
-                    I felt like everything I had ever done<br>
-                    had all been worth it.</p>
-                    <p>There was a Boy with passion, with goals,<br>
-                    all of them too far away,<br>
-                    until he met you,<br>
-                    and remembered how to use his voice again.</p>
-                    <p>You talk about The Boy like you've known him<br>
-                    for years, and maybe that's why I want to be<br>
-                    yours for years.<br>
-                    And there's nobody I'd rather be interlinked with.</p>
-                `
-            },
-            {
-                id: "what-i-forgot-to-forget",
-                title: "what i forgot to forget",
-                date: "19.06.2026",
-                type: "Short Story",
-                content: `
-                    <p>As we pass through the pretty field we frolic, laugh and play games, just as we have done every single day of our lives.</p>
-                    <p>But this time there is something off. It doesn't quite feel the same.</p>
-                    <p>It ALWAYS feels the same.</p>
-                    <p>I can't help but slow down and look up at the pink cotton candy clouds and orange sky, then to the bright green leaves on the tall brown trees until the overdose of colours starts to twist my stomach into knots. I can feel my skin prickling as if being poked by dozens of tiny needles. My eyes ache. I fall to my knees in the grass.</p>
-                    <p>All noise around me stops. No more laughter, no more playing. Even the birds aren't chirping anymore.</p>
-                    <p>I fight the sharp pain in my chest which seems to be desperately trying to remind me of something… Or protect me from something.</p>
-                    <p>I think I've felt this pain before.</p>
-                    <p>"…I don't want to play anymore."</p>
-                    <p>Silence. Eerie silence. The type that presses down on your ears with weight until they ring and your head spins.</p>
-                    <p>I can hear my heartbeat now, it's too loud and too fast. It burns, as if it is trying to claw its way out from inside me. If I listen closely, I could almost make out words.</p>
-                    <p>I raise my head slowly, I try to speak again, but nothing comes out. My lips are moving but my voice is being swallowed. Sure enough, they have come back for me, my friends. But they don't smell right. They smell like mould.</p>
-                    <p>As my eyes reach their faces, I can't recognize them at all. Their eyes are disgustingly big and round like some kind of insects, their irises having lost all colour. They don't move. None of them move. Their mouths are frozen in the same smiles from moments ago, but they no longer match their inhuman faces. They're not even blinking. Their chests aren't moving.</p>
-                    <p>I stare in horror, until suddenly everything goes— I blink.</p>
-                    <p>I open the door, stepping outside. I brush off my damp knees. As I pass the window, I catch a glimpse of my reflection and pause. For a moment, I don't recognize the boy looking back. He looks tired, hollow. As if he hasn't slept in days. Then I blink, and it's just me again. It is a bright, sunny day like always. The birds are chirping. The sky is the right shade of blue. Not a cloud in sight.</p>
-                    <p>I am on my way to meet my friends.</p>
-                    <p>I can't wait to see my friends today.</p>
-                `
-            },
-            {
-                id: "stained-glass",
-                title: "stained glass",
-                date: "17.06.2026",
-                type: "Journal",
-                content: `
-                    <p>Are we the same people when we wake up? I would say no, because what is it that changes people? Experiences, right? And do we not experience alternate versions of reality in our sleep, through dreams, nightmares and whatever else exists during the deepest stages of sleep? Dreams can sometimes be so vivid, it can be hard to tell whether they had actually occurred or not.</p>
-                    <p>I have had many experiences with vivid dreams in the past, but also quite a lot recently. The vivid, unforgettable type that would leave me in an amnesic haze upon awakening. I would lie awake in my bed trying to decipher whether or not what had occurred was an illusion or not. Whether I had actually had that strange conversation with my best friend or not. Of course, I had not, yet even though I knew in the moment it was impossible, it felt too real to be impossible.</p>
-                    <p>In a similar way, guilt can have an interesting effect on people. Like a dream you couldn't help but feel slightly unnerved by, borrowed guilt can weigh down on your mind. The type of guilt where you would feel guilty for defending your perspective because you felt the other person was disappointed by the fact you didn't quite see eye to eye.</p>
-                    <p>I've been thinking about it again since an argument a number of days ago, an argument about boundaries. Every time this kind of topic arises, the faint smell of old friendships seeps through the cracks in my memory to the forefront of my mind.</p>
-                    <p>I am glad I mustered up the courage to give pieces of myself back to the world, because when I did it was as if my entire being was reassembled into beautiful a stained glass window.</p>
-                    <p>I would frequently feel guilt gnawing away at me and making my brain itch over small things, and even for that which was not my fault to begin with. But now I have found some kind of clarity; when my nightmare is no longer what comforts me, it is easy to find my zeal again.</p>
-                    <p>Some people may have wanted to lock their hearts in a box and forget them there, but I will not write my name on a grave next to theirs.</p>
-                `
-            },
-            {
-                id: "red-petals",
-                title: "red petals",
-                date: "17.06.2026",
-                type: "Fragment",
-                content: `
-                    <p>I am woken by the sun's gentle rays caressing my forehead, seeping into my eyes and bringing me back into the world of the living. I roll out of bed, climbing to my feet as I look into my eyes in the mirror. There was a time where I couldn't recognize my face, where next to me in the reflection I could see another pair of eyes crossing mine. I rub my eyes.</p>
-                    <p>These red petals that would blossom into hell and burn me at the touch. I played the game, and lost myself in the process. My heart wasn't tar before.</p>
-                    <p>My hands shook, I tried to hold them, to calm down and breathe, but I was sinking deeper and drowning. Pre-emptive tears for something I haven't experienced and anger for a future mistake.</p>
-                    <p>It's time.</p>
-                    <p>I gather myself and walk out onto the open stage, and as I looked out at the rows of faceless dolls staring back at me, I forgot what I was supposed to play.</p>
-                    <p>But I won't stop the music.</p>
-                `
-            },
-            {
-                id: "i-can-so-i-must",
-                title: "I can, so I must",
-                date: "08.06.2026",
-                type: "Journal",
-                content: `
-                    <p>It has been a strange few weeks for me. In a bad way? No, not at all. Just strange, unfamiliar. They say I was born too late to explore the Earth, and too early to explore the stars, but what does that matter when there's still so much I have yet to understand about myself?</p>
-                    <p>I have seen my friends a lot in the past few months, met someone I love, and felt very content with life. A nice change of pace for me. Felt like something had changed within me, like I loosened up a lot. It feels like a lot of subconscious pressure was released, and everything became easier.</p>
-                    <p>It's tough to think of what to say when you have so much to say. That's something I've half-figured out, but it's tough when your mind is so active that you almost enjoy the moment too much to break the silence, or if you're so desperate to break the silence that the thoughts crash into each other and nothing manages to escape your lips. It sounds complicated when I put it that way, but it's really just a matter of not letting your nerves control you. Once I realized that it wasn't so hard, the hard part is remembering that.</p>
-                    <p>Was on a walk recently and saw a man, young, probably only a few years older than me, carrying two shopping bags, one in each hand. They were massive, almost overflowing, and I could see his arms shaking as he walked before stopping and putting them down for a moment, looking frustrated, to take a break, before picking them back up with some renewed fire in his eyes and continuing down his path, passing me as he walked.</p>
-                    <p>I couldn't help but keep thinking about it for some reason. The memory lingered in the back of my mind for days. The whole incident, in my mind, was kind of a microcosm for the struggles of life. Carrying a lot of responsibility and burdens, perhaps a lot of which isn't even your own, until you can't anymore. Until your metaphorical arms give out. But even if you think you can't keep going, you must. You have your reason(s) to. And if you don't, then why did you even start in the first place?</p>
-                    <p>When I think of it like that, a lot of decisions I have made didn't make much sense. I didn't have reasons other than 'I can, so I must' for pursuing many of my passions. Young David had a tendency to be motivated by this; this need to prove himself and to be 'great' at everything he did, and he did, many times. But it was never enough. Every milestone was just another ceiling to be broken through, and with this mindset I found it difficult to truly appreciate or enjoy what I was doing in the moment, it was more so done for my appreciation and joy in some theoretical future that was never even guaranteed to begin with. And with this realization, I had been given a sense of clarity I had wanted for a long time, and the cycle came to an end. I think she's a big part of why my metaphorical bags feel lighter now.</p>
-                    <p>Am I proud of my achievements? Yes. This is the biggest thing. I can now say, without a doubt, that I am proud of myself for what I've achieved and for how far I've come.</p>
-                    <p>Would I put myself through it again? No. Or at least, not in the same way.</p>
-                `
-            }
-        ];
-
-        const aboutContent = `
-            <p>This is Lost Library. You've been living here as long as you can remember.</p>
-            <p></p>
-            <p></p>
-        `;
-
-        // ---------- AUTH ----------
-        let isAuthenticated = sessionStorage.getItem('blogAuth') === 'true';
-
-        function checkAuth() {
-            const hash = window.location.hash;
-            const isAuthPage = hash === '#about' || hash === '' || hash.startsWith('#entry-');
-            if (isAuthPage) return isAuthenticated;
-            return true;
-        }
-
-        // ---------- RENDER ----------
-        function showLogin(error = '') {
-            const app = document.getElementById('app');
-            app.innerHTML = `
-                <div style="max-width:400px; margin:100px auto; text-align:center;">
-                    <div style="background:white; padding:2rem; border-radius:8px; border:1px solid #e2dcd0;">
-                        <h2 style="font-weight:normal;">Lost Library</h2>
-                        <p style="color:#7a6e5d; margin-bottom:1.5rem; font-style:italic;">A private journal</p>
-                        <input type="password" id="passwordInput" placeholder="Enter password" autofocus style="width:100%; padding:12px; margin:10px 0; border:1px solid #d4cdc0; border-radius:4px; font-family:monospace; font-size:1rem;">
-                        <button onclick="attemptLogin()" style="background:#1e1e1e; color:white; border:none; padding:12px 24px; border-radius:4px; cursor:pointer; font-size:1rem; margin-top:10px;">Enter</button>
-                        <div style="color:#b55a4a; margin-top:10px; font-size:0.9rem;">${error}</div>
-                    </div>
-                </div>
-            `;
-            document.getElementById('passwordInput').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') attemptLogin();
-            });
-        }
-
-        function attemptLogin() {
-            const input = document.getElementById('passwordInput');
-            if (input.value === BLOG_PASSWORD) {
-                sessionStorage.setItem('blogAuth', 'true');
-                isAuthenticated = true;
-                renderPage();
-            } else {
-                showLogin('Wrong password. Try again.');
-            }
-        }
-
-        function renderPage() {
-            if (!checkAuth()) {
-                showLogin();
-                return;
-            }
-
-            const hash = window.location.hash;
-            const app = document.getElementById('app');
-
-            // ABOUT PAGE
-            if (hash === '#about') {
-                app.innerHTML = `
-                    <div class="site-header">
-                        <h1 class="site-title"><a href="#">Lost Library</a></h1>
-                        <div class="site-description">you've been living here as long as you can remember</div>
-                        <div class="nav">
-                            <a href="#" data-nav="library">Library</a>
-                            <a href="#about" data-nav="about">About</a>
-                        </div>
-                    </div>
-                    <div class="page-content">${aboutContent}</div>
-                    <footer>unfinished</footer>
-                `;
-                attachNav();
-                return;
-            }
-
-            // SINGLE ENTRY
-            if (hash.startsWith('#entry-')) {
-                const id = hash.replace('#entry-', '');
-                const entry = entries.find(e => e.id === id);
-                if (entry) {
-                    app.innerHTML = `
-                        <div class="site-header" style="border-bottom: none; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
-                            <h1 class="site-title" style="font-size:1.8rem;"><a href="#">Lost Library</a></h1>
-                        </div>
-                        <a href="#" class="back-link" data-nav="library">← Back to Library</a>
-                        <div class="entry-full">
-                            <div class="entry-type">${entry.type}</div>
-                            <h1 class="entry-title">${entry.title}</h1>
-                            <div class="entry-date">${entry.date}</div>
-                            <div class="entry-content">${entry.content}</div>
-                        </div>
-                        <footer>unfinished</footer>
-                    `;
-                    attachNav();
-                    return;
-                }
-            }
-
-            // LIBRARY (default)
-            let listHtml = '';
-            for (const entry of entries) {
-                listHtml += `
-                    <a href="#entry-${entry.id}" class="entry-link">
-                        <span class="title">${entry.title}</span>
-                        <span class="type">${entry.type}</span>
-                        <span class="meta">${entry.date}</span>
-                    </a>
-                `;
-            }
-
-            app.innerHTML = `
-                <div class="site-header">
-                    <h1 class="site-title"><a href="#">Lost Library</a></h1>
-                    <div class="site-description">you've been living here as long as you can remember</div>
-                    <div class="nav">
-                        <a href="#" data-nav="library">Library</a>
-                        <a href="#about" data-nav="about">About</a>
-                    </div>
-                </div>
-                ${listHtml}
-                <footer>unfinished</footer>
-            `;
-            attachNav();
-        }
-
-        function attachNav() {
-            document.querySelectorAll('[data-nav]').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const target = link.getAttribute('data-nav');
-                    if (target === 'library') {
-                        window.location.hash = '';
-                        renderPage();
-                    } else if (target === 'about') {
-                        window.location.hash = 'about';
-                        renderPage();
-                    }
-                });
-            });
-        }
-
-        // ---------- HASH CHANGE ----------
-        window.addEventListener('hashchange', renderPage);
-
-        // ---------- INIT ----------
-        renderPage();
-    </script>
 </body>
 </html>
